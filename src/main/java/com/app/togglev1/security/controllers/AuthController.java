@@ -59,6 +59,26 @@ public class AuthController {
 	JwtProvider jwtProvider;
 	@Autowired
 	StudiesService studiesService;
+	
+	@PostMapping("/addRolAdmin")
+	public void addRolAdmin() {
+		Rol rolAdmin = new Rol(RolName.ROLE_ADMIN);
+		rolService.save(rolAdmin);
+	}
+	
+
+	@PostMapping("/addRolAdmin")
+	public void addRolManager() {
+		Rol rolUser = new Rol(RolName.ROLE_MANAGER_CENTER);
+		rolService.save(rolUser);
+	}
+	
+
+	@PostMapping("/addRolTeacher")
+	public void addRolTeacher() {
+		Rol rolTeacher = new Rol(RolName.ROLE_TEACHER_CENTER);
+		rolService.save(rolTeacher);
+	}
 
 	@PostMapping("/create-acount-teacher")
 	public ResponseEntity<?> nuevoProfesor(@Valid @RequestBody NewUser newUser, BindingResult bindingResult) {
