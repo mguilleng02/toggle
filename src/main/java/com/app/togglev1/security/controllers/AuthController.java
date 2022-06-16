@@ -59,7 +59,7 @@ public class AuthController {
 	JwtProvider jwtProvider;
 	@Autowired
 	StudiesService studiesService;
-	
+	/*
 	@PostMapping("/addRolAdmin")
 	public void addRolAdmin() {
 		Rol rolAdmin = new Rol(RolName.ROLE_ADMIN);
@@ -79,7 +79,7 @@ public class AuthController {
 		Rol rolTeacher = new Rol(RolName.ROLE_TEACHER_CENTER);
 		rolService.save(rolTeacher);
 	}
-
+*/
 	@PostMapping("/create-acount-teacher")
 	public ResponseEntity<?> nuevoProfesor(@Valid @RequestBody NewUser newUser, BindingResult bindingResult) {
 
